@@ -41,56 +41,56 @@ All changes that occur in the MPCManager class are reported via the delegate.
 ```swift
 func foundPeer(id: MCPeerID, discoveryInfo: [String : String]?)
 ```
-Notifies the delegate that a peer has been found. If you wish to invite the peer, call `func invite(peer: MCPeerID)` on the manager object.\
+Notifies the delegate that a peer has been found. If you wish to invite the peer, call `func invite(peer: MCPeerID)` on the manager object.<br>
 
 ```swift
 func lostPeer(id: MCPeerID)
 ```
-Notifies the delegate that a peer is no longer available for connection.\
+Notifies the delegate that a peer is no longer available for connection.<br>
 
 ```swift
 func connectedToPeer(id: MCPeerID)
 ```
-Notifies the delegate that a peer has been successfully connected to.\
+Notifies the delegate that a peer has been successfully connected to.<br>
 
 ```swift
 func disconnectedFromPeer(id: MCPeerID)
 ```
-Notifies the delegate that a peer has disconnected from the session.\
+Notifies the delegate that a peer has disconnected from the session.<br>
 
 ```swift
 func receivedInvite(from peerID: MCPeerID, context: Data?, response: @escaping (Bool) -> Void)
 ```
-Notifies the delegate that an invite has been received. Call `response(true)` to accept or `response(false)` to decline.\
+Notifies the delegate that an invite has been received. Call `response(true)` to accept or `response(false)` to decline.<br>
 
 ```swift
 func encounteredError(error: Error)
 ```
-Notifies the delegate that an error has been encountered, providing an opportunity to present an error message to the user.\
+Notifies the delegate that an error has been encountered, providing an opportunity to present an error message to the user.<br>
 
 ### There are four optional methods:
 
-The following methods are optional because although every use case will require at least one of these, most only require one.\
+The following methods are optional because although every use case will require at least one of these, most only require one.<br>
 
 ```swift
 func didReceive(data: Data, fromPeer id: MCPeerID)
 ```
-Notifies the delegate that data has been received.\
+Notifies the delegate that data has been received.<br>
 
 ```swift
 func didReceive(stream: InputStream, withName name: String, fromPeer id: MCPeerID)
 ```
-Notifies the delegate that a stream has been received.\
+Notifies the delegate that a stream has been received.<br>
 
 ```swift
 func didStartReceivingResource(withName resourceName: String, fromPeer id: MCPeerID, progress: Progress)
 ```
-Notifies the delegate that resources are starting to be received.\
+Notifies the delegate that resources are starting to be received.<br>
 
 ```swift
 func didFinishReceivingResource(withName resourceName: String, fromPeer id: MCPeerID, at localURL: URL?, withError error: Error?)
 ```
-Notifies the delegate that resources have been delivered to the specified local URL.\
+Notifies the delegate that resources have been delivered to the specified local URL.<br>
 
 ## License
 

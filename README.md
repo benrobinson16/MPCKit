@@ -17,15 +17,20 @@ let myManager = MPCManager()
 myManager.delegate = self
 
 // To start and stop advertising...
-myManager.startAdvertising()
-myManager.stopAdvertising()
+myManager.start(.advertising)
+myManager.stop(.advertising)
 
 // To start and stop browsing...
-myManager.startBrowsing()
-myManager.stopBrowsing()
+myManager.start(.browsing)
+myManager.stop(.browsing)
 
-// To stop all (advertising, browser and session)...
-myManager.stopAll()
+// To start and stop new connections...
+myManager.start(.newConnections)
+myManager.stop(.newConnections)
+
+// To start and stop all connections (including existing)...
+myManager.start(.allConnections)
+myManager.stop(.allConnections)
 ```
 ## The delegate:
 

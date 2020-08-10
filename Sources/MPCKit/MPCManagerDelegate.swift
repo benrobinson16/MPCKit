@@ -24,6 +24,18 @@ public protocol MPCManagerDelegate {
 
 extension MPCManagerDelegate {
     
+    public func foundPeer(id: MCPeerID, discoveryInfo: [String : String]?) {
+        print("foundPeer - not implemented")
+    }
+    
+    public func lostPeer(id: MCPeerID) {
+        print("lostPeer - not implemented")
+    }
+    
+    func receivedInvite(from peerID: MCPeerID, context: Data?, response: @escaping (Bool) -> Void) {
+        print("receivedInvite - not implemented")
+    }
+    
     public func didReceive(data: Date, fromPeer id: MCPeerID) {
         print("didReceiveData - not implemented")
     }

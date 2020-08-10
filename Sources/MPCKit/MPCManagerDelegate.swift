@@ -32,7 +32,7 @@ extension MPCManagerDelegate {
         print("lostPeer - not implemented")
     }
     
-    func receivedInvite(from peerID: MCPeerID, context: Data?, response: @escaping (Bool) -> Void) {
+    public func receivedInvite(from peerID: MCPeerID, context: Data?, response: @escaping (Bool) -> Void) {
         print("receivedInvite - not implemented")
     }
     

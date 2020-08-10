@@ -24,19 +24,19 @@ public protocol MPCManagerDelegate {
 
 extension MPCManagerDelegate {
     
-    func didReceive(data: Date, fromPeer id: MCPeerID) {
+    public func didReceive(data: Date, fromPeer id: MCPeerID) {
         print("didReceiveData - not implemented")
     }
     
-    func didReceive(stream: InputStream, withName name: String, fromPeer id: MCPeerID) {
+    public func didReceive(stream: InputStream, withName name: String, fromPeer id: MCPeerID) {
         print("didReceiveStream - not implemented")
     }
     
-    func didStartReceivingResource(withName resourceName: String, fromPeer id: MCPeerID, progress: Progress) {
+    public func didStartReceivingResource(withName resourceName: String, fromPeer id: MCPeerID, progress: Progress) {
         print("didStartReceivingResource - not implemented")
     }
     
-    func didFinishReceivingResource(withName resourceName: String, fromPeer id: MCPeerID, at localURL: URL?, withError error: Error?) {
+    public func didFinishReceivingResource(withName resourceName: String, fromPeer id: MCPeerID, at localURL: URL?, withError error: Error?) {
         print("didFinishReceivingResource - not implemented")
     }
     

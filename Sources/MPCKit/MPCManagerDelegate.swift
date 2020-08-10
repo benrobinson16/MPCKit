@@ -36,7 +36,7 @@ extension MPCManagerDelegate {
         print("receivedInvite - not implemented")
     }
     
-    public func didReceive(data: Date, fromPeer id: MCPeerID) {
+    public func didReceive(data: Data, fromPeer id: MCPeerID) {
         print("didReceiveData - not implemented")
     }
     
